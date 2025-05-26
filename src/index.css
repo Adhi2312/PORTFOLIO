@@ -3,6 +3,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+    background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,3 +12,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.home-button
+{
+    display: flex;
+    
+    /* border:solid rgb(250 204 21 / var(--tw-bg-opacity, 1)) 2px ; */
+     border-radius:50px;
+     color: rgb(31 41 55 / var(--tw-bg-opacity, 1)) ;
+
+    
+  background: linear-gradient(to right, rgb(31 41 55 / var(--tw-bg-opacity, 1))  50%, rgb(250 204 21 / var(--tw-bg-opacity, 1)) 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition: background-position 0.2s ease;
+  transition: color 0s ease;
+
+}
+.home-button:hover
+{
+  color: white;
+  background-position: right bottom;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
