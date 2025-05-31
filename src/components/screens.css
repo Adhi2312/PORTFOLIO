@@ -5,7 +5,7 @@
     border:solid rgb(250 204 21 / var(--tw-bg-opacity, 1)) 2px ;
      border-radius:50px;
     
-
+  /* opacity: 100%; */
   background: linear-gradient(to right, rgb(0, 0, 0) 50%, rgb(250 204 21 / var(--tw-bg-opacity, 1)) 50%);
   background-size: 200% 100%;
   background-position: left bottom;
@@ -31,4 +31,19 @@ h1,p{
     margin-left: -21px;
    
 }
-
+.about-button2
+{
+    display: flex;
+    width: 300px;
+    border:solid rgb(250 204 21 / var(--tw-bg-opacity, 1)) 2px ;
+    border-radius:50px;
+    margin:10px 0px ;
+    background: linear-gradient(to right, rgb(0, 0, 0) 50%, rgb(250 204 21 / var(--tw-bg-opacity, 1)) 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    transition: background-position 0.5s ease;
+}
+.about-button2:hover
+{
+    background-position: right bottom;
+}
