@@ -3,57 +3,64 @@ import { FaArrowRight } from "react-icons/fa";
 import { FaBriefcase } from "react-icons/fa6";
 import images from '../imgs/images.png'
 import django from '../imgs/django.svg'
+import { FaDownload } from "react-icons/fa";
+
+import { motion } from "framer-motion";
+
+
 
 export const About = () => {
   return (
-    <div className='p-10  mx-auto   h-full flex flex-col gap-7  '>
-        <h1 className='uppercase text-center  font-extrabold text-5xl '>About <span className='text-yellow-400'>ME</span></h1>
+    <div className='px-5 py-10  mx-auto   h-full flex flex-col gap-7  '>
+      
+        <h1 className='uppercase text-center m-7  font-extrabold text-6xl  '>About <span className='text-[#ffb400]'>ME</span></h1>
         <FirstComponent />
-        <h1 className='uppercase my-7  font-bold text-3xl mb-5 text-center'>Skills</h1> 
+        <h1 className='uppercase my-7  font-bold text-3xl mb-5 text-center'>My Skills</h1> 
          <Skills />
+         <h1 className='uppercase my-7  font-bold text-3xl mb-5 text-center'>Experience</h1>
+         <Education/>
     </div>
   )
 }
 const FirstComponent = () => {return(
           <div className='flex  flex-col  lg:flex-row my-6   '>
             <PersonalInfo />
-            <Education />
+            <Achievements />
           </div>
 )}
 const Education = () => {
   return(
-    <div class="  lg:w-7/12 lg:px-16   mb-10 lg:mb-0  ">
-                <h1 className='uppercase text-center my-7  font-bold text-3xl mb-5 lg:text-start'>Education</h1>
+    <div class=" pb-20  lg:px-40    lg:mb-0  ">
+                {/* <h1 className='uppercase text-center my-7  font-bold text-3xl mb-5 lg:text-start'>Education</h1> */}
                 <div className=' flex  mb-5'>
                   <div>
-                  <button className='relative bg-yellow-400 p-2 rounded-full'><FaBriefcase size={20}/></button>
+                  <button className='relative mt-0 bg-[#ffb400] p-2 rounded-full'><FaBriefcase color='white' size={20}/></button>
                   </div>
                   <div className='time-line'>
-                    <p className='uppercase p-1 mb-3 max-w-28 text-center text-xs bg-gray-400 rounded-full'>2022 - present</p>
-                    <h1 className='font-semibold text-lg uppercase'>B.E Mechanical engineering</h1>
-                    <p className='text-gray-400'> Sri Eshwar College Of Engineering </p>
+                    <div className='flex  flex-col border border-gray-600 gap-2 mb-3 p-5 rounded-lg'>
+                    <p className='uppercase  px-4 py-2 mb-3 max-w-20 text-center text-xs bg-[#f2f2f2] dark:bg-gray-600 rounded-full'>2024</p>
+                    <h1 className='text-2xl font-semibold lg:text-3xl'>Data Science Intern     </h1>
+                    <h1 className='text-lg font-semibold'>V3 Analytics     </h1>
+                    <p className='text-gray-400'>  Leveraged advanced data science techniques for comprehensive data cleaning, exploratory data analysis, preprocessing, and analysis to extract actionable insights supporting critical business decisions.</p>
+                    </div>
                   </div>
                 </div>
-                <div className='flex mb-5'>
+                <div className=' flex  mb-5'>
                   <div>
-                  <button className='relative bg-yellow-400 p-2 rounded-full'><FaBriefcase size={20}/></button>
+                  <button className='relative mt-0 bg-[#ffb400] p-2 rounded-full'><FaBriefcase color="white" size={20}/></button>
                   </div>
                   <div className='time-line'>
-                    <p className='uppercase p-1 mb-3 max-w-28 text-center text-xs bg-gray-400 rounded-full'>2020 - 2022</p>
-                    <h1 className='font-semibold text-lg uppercase'>higher secondary certificate | <span className='text-sm'><span className='text-gray-400'>Percentage</span> : 98 </span> </h1>
-                    <p className='text-gray-400'> RKR Gnanodhaya Matric Higher Secondary School </p>
+                    <div className='flex  flex-col border border-gray-600 gap-2 mb-3 p-5 rounded-lg'>
+                    <p className='uppercase  px-4 py-2 mb-3 max-w-20 text-center text-xs bg-[#f2f2f2] dark:bg-gray-600 rounded-full'>2024</p>
+                    <h1 className='text-2xl font-semibold lg:text-3xl'>MERN Stack Developer    </h1>
+                    <h1 className='text-lg font-semibold'>G-Soft Technologies    </h1>
+                    <p className='text-gray-400'> Engineered responsive web applications utilizing the MERN Stack, advancing expertise in frontend development, backend architecture, and database integration.</p>
+                    </div>
                   </div>
                 </div>
-                <div className='flex mb-5'>
-                  <div>
-                  <button className='relative bg-yellow-400 p-2 rounded-full'><FaBriefcase size={20}/></button>
-                  </div>
-                  <div className='time-line'>
-                    <p className='uppercase p-1 mb-3 max-w-28 text-center text-xs bg-gray-400 rounded-full'>2019 - 2020</p>
-                    <h1 className='font-semibold text-lg uppercase'>Secondary School Leaving Certificate | <span className='text-sm'><span className='text-gray-400'>Percentage</span> : 98 </span></h1>
-                    <p className='text-gray-400'> RKR Gnanodhaya Matric Higher Secondary School - Tiruppur . </p>
-                  </div>
-                </div>
+                
+                
+                
   
 
 
@@ -63,40 +70,40 @@ const Education = () => {
 }
 const Skills = () => {
   return(
-    <div className='w-full  px-0 pb-20 lg:px-40  '>
+    <div className='w-full  px-0  lg:px-40  '>
 
           {/* <Education /*/}
           <div className=' grid   grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-20 w-full'>
-            <div className=' flex flex-col items-center justify-center p-5 rounded-lg'>
+            <div className=' flex flex-col gap-3 items-center justify-center p-5 rounded-lg'>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="min-w-20 min-h-20 w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28"   />
-            <p className='text-center '>HTML</p>
+            <p className='text-center text-lg font-medium '>HTML</p>
             </div>
-            <div className=' flex flex-col items-center justify-center p-5 rounded-lg'>
+            <div className=' flex flex-col gap-3 items-center justify-center p-5 rounded-lg'>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"  class="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" />
-            <p className='text-center '>CSS</p>
+            <p className='text-center text-lg font-medium '>CSS</p>
             </div>
-            <div className=' flex flex-col items-center justify-center p-5 rounded-lg'>
+            <div className=' flex flex-col gap-3 items-center justify-center p-5 rounded-lg'>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"  class="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" />
-            <p className='text-center '>Javascript</p>
+            <p className='text-center text-lg font-medium'>Javascript</p>
             </div>
-            <div className=' flex flex-col items-center justify-center p-5 rounded-lg'>
+            <div className=' flex flex-col gap-3 items-center justify-center p-5 rounded-lg'>
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"  class="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" />
-            <p className='text-center '>Tailwind CSS</p>
+            <p className='text-center text-lg font-medium'>Tailwind CSS</p>
             </div>
-            <div className=' flex flex-col items-center justify-center p-5 rounded-lg'>
+            <div className=' flex flex-col gap-3 items-center justify-center p-5 rounded-lg'>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"  class="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" />
-            <p className='text-center '>React</p>
+            <p className='text-center text-lg font-medium'>React</p>
             </div>
-            <div className=' flex flex-col items-center justify-center p-5 rounded-lg'>
+            <div className=' flex flex-col gap-3 items-center justify-center p-5 rounded-lg'>
             <img src={images}  class="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" />
-            <p className='text-center '>Node</p>
+            <p className='text-center text-lg font-medium'>Node</p>
             </div>
-            <div className=' flex flex-col items-center justify-center p-5 rounded-lg'>
-            <img src={django} className='w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28'/> <p className='text-center '>Django</p>
+            <div className=' flex flex-col gap-3 items-center justify-center p-5 rounded-lg'>
+            <img src={django} className='w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28'/> <p className='text-center text-lg font-medium'>Django</p>
             </div>
-            <div className=' flex flex-col items-center justify-center p-5 rounded-lg'>
+            <div className=' flex flex-col gap-3 items-center justify-center p-5 rounded-lg'>
              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"  class="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" />
-           <p className='text-center '>Git</p>
+           <p className='text-center text-lg font-medium'>Git</p>
             </div>
           </div>    
      </div>
@@ -104,26 +111,60 @@ const Skills = () => {
 }
 const PersonalInfo = () => {
   return(
-    <div class="lg:w-5/12 max-h-svh border-0 p-5 px-0 mr-10 border-yellow-400 rounded-lg h-auto lg:h-full bg-gray-800 text-white lg:border-2 lg:px-8">
+    <div class="lg:w-auto  border-0  py-8  border-yellow-400 rounded-lg h-auto lg:h-full  text-[#696969] dark:text-white lg:border-2 lg:px-8">
                 <h1 className='uppercase mb-6  flex flex-col text-center font-bold text-3xl'>Personal Info</h1>
-                <div class="flex justify-between  text-lg  ">
-                <div className='flex flex-col gap-2  mb-5'>
-                <p><span className='text-gray-400'>First Name:</span > Steve</p>
-                <p><span className='text-gray-400'>Last Name: </span> Milner</p> 
-                <p><span className='text-gray-400'>Age:</span> 27 Years</p>
-                <p><span className='text-gray-400'>Nationality</span>: Tunisian</p>
-                <p><span className='text-gray-400'>Freelance</span>: Available</p>
+                <div className='flex flex-col items-center'>
+                <div class="flex gap-20   md:text-lg lg:text-lg  ">
+                <div className='flex flex-col gap-5  mb-5'>
+                <p><span className='text-gray-400'>First Name:</span > Adhilingavignesh</p>
+                <p><span className='text-gray-400'>Last Name: </span> Kalaiselvan</p> 
+                <p><span className='text-gray-400'>Age:</span> 19 Years</p>
+                
+                <p className='text-green-400'><span className='text-gray-400'>Freelance</span>: Available</p>
                 </div>
-                <div className='flex flex-col gap-2'>
-                <p><span className='text-gray-400'>Address:</span> Tunis</p>
-                <p><span className='text-gray-400'>phone:</span> +21621184010</p>
-                <p><span className='text-gray-400'>Email:</span> you@mail.com</p>
-                <p><span className='text-gray-400'>Skype:</span> steve.milner</p>
-                <p><span className='text-gray-400'>langages:</span> French, English</p>
+                <div className='flex flex-col gap-5'>
+                <p><span className='text-gray-400'>Nationality</span>: Indian</p>
+                <p><span className='text-gray-400'>phone:</span> +91 6385242956</p>
+                <p><span className='text-gray-400'>Email:</span> adhiabcd1234@mail.com</p>
+                
+                <p><span className='text-gray-400'>languages:</span> Tamil, English</p>
                 </div>
                 </div>
-                <button  class="about-button"  ><p className='ml-6 mr-4 mt-auto mb-auto'>More About Me</p>  <FaArrowRight color='white' size={50} className='p-4 bg-yellow-400 rounded-full'/></button>
-            </div >
+  <a
+    href="/resume.pdf"
+    download="AdhilingaVignesh_CV.pdf"
+    className="about-button flex items-center"
+  >
+    <p className='ml-6 mr-4 mt-auto mb-auto'>DOWNLOAD CV</p>
+    <FaDownload color='white' size={50} className='p-4 bg-[#ffb400] rounded-full'/>
+  </a>
+</div>
+                </div>
   )
 }
+const Achievements = () => {
+  return(
+    <div className='grid grid-cols-2 gap-6  py-2 ml-auto mr-auto  px-4 lg:w-2/4  '>
+      <div className="flex flex-col justify-center items-center border border-gray-600 rounded-md  p-4 ">
+  <h1 className="text-4xl mg:text-5xl lg:text-5xl font-extrabold text-[#ffb400] p-2">400+</h1>
+  <p className="text-lg font-medium tracking-wide text-[#696969] dark:text-gray-300 upper">Problems Solved</p>
+</div>
 
+
+      <div className="flex flex-col justify-center items-center border border-gray-600 rounded-md m p-4 ">
+  <h1 className="text-4xl mg:text-5xl  mg:text-5xl lg:text-5xl font-extrabold text-[#ffb400] p-2">Top 15%</h1>
+  <p className="text-lg tracking-wide font-medium text-[#696969] dark:text-gray-300 u">Leetcode Rating</p>
+</div>
+ <div className="flex flex-col justify-center items-center border border-gray-600 rounded-md  p-4  ">
+  <h1 className="text-5xl font-extrabold text-[#ffb400] p-2">7.5</h1>
+  <p className="text-lg tracking-wide font-medium text-[#696969] dark:text-gray-300 uppercase">CGPA</p>
+</div>
+ <div className="flex flex-col justify-center items-center border border-gray-600 rounded-md  p-4  ">
+  <h1 className="text-4xl mg:text-5xl lg:text-5xl font-extrabold text-[#ffb400] p-2">2026</h1>
+  <p className="text-lg tracking-wide font-medium text-[#696969] dark:text-gray-300 ">Graduate</p>
+</div>
+      
+
+    </div>
+  )
+}

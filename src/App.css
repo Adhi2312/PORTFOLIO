@@ -42,3 +42,15 @@
   align-items: center;
   padding: 150px 0px;
 }
+
+/* body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; 
+  height: 100%;
+  background: #f4b942; 
+  clip-path: polygon(0 0, 20% 0, 40% 100%, 0 100%);
+  z-index: 1;
+}  */

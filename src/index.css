@@ -1,39 +1,66 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-    background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  /* background-color: black; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  cursor: none;
+  /* overflow-y: hidden; */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.home-button
-{
-    display: flex;
-    
-    /* border:solid rgb(250 204 21 / var(--tw-bg-opacity, 1)) 2px ; */
-     border-radius:50px;
-     color: rgb(31 41 55 / var(--tw-bg-opacity, 1)) ;
-
-    
-  background: linear-gradient(to right, rgb(31 41 55 / var(--tw-bg-opacity, 1))  50%, rgb(250 204 21 / var(--tw-bg-opacity, 1)) 50%);
+.home-button {
+  display: flex;
+  border-radius: 50px;
+  color: rgba(31, 41, 55, 0); /* Make text invisible */
+  background: linear-gradient(
+    to right,
+    rgba(31, 41, 55, 0) 50%, /* Transparent gray */
+    rgba(255, 180, 0, 1) 50% /* Solid yellow */
+  );
   background-size: 200% 100%;
   background-position: left bottom;
-  transition: background-position 0.2s ease;
-  transition: color 0s ease;
-
+  transition: background-position 0.3s ease, color 0.2s ease;
+  z-index: 10;
 }
-.home-button:hover
-{
+
+.home-button:hover {
   color: white;
+  /* background-color:rgba(255, 180, 0, 1)   ; */
   background-position: right bottom;
 }
+
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Hide scrollbar but keep scrolling */
+body {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #555 #222; /* thumb and track color */
+  overflow-y: scroll; /* always show scrollbar (prevents shifting) */
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 8px; /* size of scrollbar */
+  height: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: #222; /* track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #555; /* scrollbar color */
+  border-radius: 10px; /* round edges */
+  border: 2px solid #222; /* space between thumb and track */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888; /* on hover */
+}

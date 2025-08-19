@@ -1,32 +1,42 @@
-.about-button
-{
-  margin:10px 0px ;
-    display: flex;
-    border:solid rgb(250 204 21 / var(--tw-bg-opacity, 1)) 2px ;
-     border-radius:50px;
-    
-  /* opacity: 100%; */
-  background: linear-gradient(to right, rgb(0, 0, 0) 50%, rgb(250 204 21 / var(--tw-bg-opacity, 1)) 50%);
+/* Light = white → yellow. Dark = black → yellow. Hover fills yellow. */
+.about-button {
+  --about-base: 255, 255, 255;              /* light: WHITE */
+  margin: 10px 0;
+  display: flex;
+  border: 2px solid rgb(250 204 21 / var(--tw-bg-opacity, 1));
+  border-radius: 50px;
+
+  background: linear-gradient(
+    to right,
+    rgb(var(--about-base)) 50%,
+    rgba(255, 180, 0, 1) 50%
+  );
   background-size: 200% 100%;
   background-position: left bottom;
-  transition: background-position 0.5s ease;
+  transition: background-position 0.5s ease, color .25s ease;
 }
-.about-button:hover
-{
-  background-position: right bottom;
+
+/* When html has class="dark" */
+.dark .about-button {
+  --about-base: 0, 0, 0;                    /* dark: BLACK */
 }
+
+.about-button:hover {
+  background-position: right bottom;        /* slides yellow across */
+}
+
 /* .about-button a {
   @apply no-underline;
 } */
-h1,p{
+/* h1,p{
     /* font-family: satoshi; */
-    margin:8px 0px ;
-}
+    /* margin:8px 0px ; */
+
 .time-line
 {
     /* display: flex;
     flex-direction: column; */
-    padding: 0px 40px;
+    padding: 10px 40px;
     border-left: 1px solid gray;
     margin-left: -21px;
    
@@ -47,3 +57,9 @@ h1,p{
 {
     background-position: right bottom;
 }
+textarea,input:focus {
+    /* border: #2a2b2b; */
+    outline: none;
+    
+}   
+
